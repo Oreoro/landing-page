@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Urban Events</title>
+        <meta name="description" content="" />
+        <link
+            rel="shortcut icon"
+            href="./assets/logo.png"
+            type="image/x-icon"
+        />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:title" content="Title of the project" />
+        <meta property="og:description" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://github.com/PaulleDemon" />
+        <!--Replace with the current website url-->
+        <meta property="og:image" content="" />
+
+        <!-- <link rel="stylesheet" href="../../tailwind-css/tailwind-runtime.css" /> -->
+        <link rel="stylesheet" href="./css/tailwind-build.css" />
+        <link rel="stylesheet" href="css/index.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+            integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body
+        class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[] tw-font-mono"
+    >
+        <header
+            class="tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full !tw-bg-primary tw-bg-opacity-0 tw-px-[5%] tw-text-white max-lg:tw-mr-auto max-lg:tw-px-4 lg:tw-justify-around"
+        >
+            <a
+                class="tw-flex tw-h-[50px] tw-min-w-fit tw-place-items-center tw-gap-5 tw-p-[4px] tw-text-2xl tw-font-medium"
+                href=""
+            >
+                <img
+                    src="./assets/logo.png"
+                    alt="logo"
+                    class="tw-h-full tw-w-full tw-object-contain"
+                />
+                <p class="tw-min-w-fit tw-text-lg max-md:tw-text-sm">Urban Events</p>
+            </a>
+            <div
+                class="collapsible-header animated-collapse max-lg:tw-shadow-md"
+                id="collapsed-header-items"
+            >
+                <div
+                    class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center"
+                >
+                    <a class="header-links" href="https://urbanevents.pk"> Home </a>
+                    <a class="header-links" href="#pricing">About </a>
+                    <a class="header-links" href=""> Pricing </a>
+                    <a class="header-links" href=""> Contact </a>
+                </div>
+                <div
+                    class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center"
+                >
+                    <a
+                        href="https://app.urbanevents.pk"
+                        aria-label="signup"
+                        class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-bg-secondary tw-p-1 tw-px-4 tw-text-black"
+                    >
+                        <span>Sign up</span>
+                    </a>
+                </div>
+                
+
+            </div>
+            <button
+                class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-white lg:tw-hidden"
+                onclick="toggleHeader()"
+                aria-label="menu"
+                id="collapse-btn"
+            ></button>
+        </header>
+
+        <section
+            class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden tw-bg-primary tw-text-white max-lg:tw-p-4 max-md:tw-mt-[50px]"
+        >
+            <div
+                class="tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-flex-col"
+            >
+                <div class="tw-flex tw-flex-col tw-place-content-center">
+                    <div
+                        class="tw-flex tw-flex-wrap tw-text-7xl tw-font-semibold tw-uppercase tw-leading-[85px] max-lg:tw-text-4xl max-md:tw-leading-snug"
+                    >
+                        <span class="reveal-hero-text">Easily Manage</span>
+                        <span class="reveal-hero-text">Ticket Sales </span>
+                    </div>
+                    <div
+                        class="reveal-hero-text tw-mt-2 tw-max-w-[450px] tw-p-2 tw-text-justify max-lg:tw-max-w-full"
+                    >
+                        Urban Events provides you tools to sell tickets and manage events effortlessly with our comprehensive suite of tools. Urban Events also offers real-time analytics and attendee insights, making it easier for you to understand and enhance your event's success.
+                    </div>
+                    <div
+                        class="reveal-hero-text tw-mt-2 tw-flex tw-max-w-[450px] tw-gap-3 tw-p-2 tw-text-xl max-lg:tw-max-w-full"
+                    >
+                        <a href="">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                    </div>
+
+                    <div
+                        class="reveal-hero-text tw-mt-4 tw-flex tw-place-items-center tw-gap-4 tw-overflow-hidden tw-p-2"
+                    >
+                        <a
+                            href="https://app.urbanevents.pk"
+                            aria-label="signup"
+                            class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-bg-secondary tw-p-1 tw-p-2 tw-px-4 tw-pl-4 tw-text-black tw-transition-colors tw-duration-[0.5s] hover:tw-bg-black hover:tw-text-white"
+                        >
+                            <span>Get Started</span>
+
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="tw-flex tw-w-full tw-max-w-[50%] tw-place-content-center tw-place-items-center tw-overflow-hidden max-lg:tw-max-w-[unset]"
+                >
+                    <div
+                        class="tw-flex tw-max-h-[80%] tw-min-w-[350px] tw-max-w-[650px] tw-overflow-hidden tw-border-2 tw-border-solid tw-border-secondary tw-p-2 max-lg:tw-h-fit max-lg:tw-max-h-[320px] max-lg:tw-w-[320px] max-lg:tw-min-w-[320px]"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1531058020387-3be344556be6"
+                            alt="app"
+                            class="reveal-up tw-h-full tw-w-full tw-object-contain"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-items-center tw-overflow-hidden tw-p-6 tw-py-5"
+        >
+            <h3 class="reveal-up tw-text-6xl tw-font-medium max-lg:tw-text-3xl">
+                Organize Great Events
+            </h3>
+            <div
+                class="reveal-up tw-my-4 tw-h-[1px] tw-w-[80%] tw-bg-black"
+            ></div>
+            <div
+                class="tw-mt-8 tw-gap-10 tw-space-y-8 max-md:tw-columns-1 lg:tw-columns-2 xl:tw-columns-3"
+            >
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[450px] tw-break-inside-avoid tw-flex-col tw-gap-2 tw-rounded-lg tw-bg-[#f3f3f3b4] tw-p-4 tw-shadow-lg max-lg:tw-w-full max-lg:tw-max-w-[400px]"
+                >
+                    <div class="tw-flex tw-place-items-center tw-gap-3">
+                        <div
+                            class="tw-h-[300px] tw-w-full tw-overflow-hidden tw-rounded-lg"
+                        >
+                            <img
+                                src="https://icom.museum/wp-content/uploads/2024/07/FW9B3170.jpg"
+                                class="tw-h-full tw-w-full tw-object-cover"
+                                alt="design"
+                            />
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-gap-2">
+                        <h3 class="tw-text-xl tw-font-medium">
+                            Conferences
+                        </h3>
+                        <p class="tw-text-gray-600">
+                            Streamline ticket sales for corporate events like conferences with Urban Events. Efficiently manage registrations and connect with industry leaders!
+                        </p>
+                        <a href="https://app.urbanevents.pk" class="tw-mt-4">
+                            <span>Get Started</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[450px] tw-break-inside-avoid tw-flex-col tw-gap-2 tw-rounded-lg tw-bg-[#f3f3f3b4] tw-p-4 tw-shadow-lg max-lg:tw-w-full max-lg:tw-max-w-[400px]"
+                >
+                    <div class="tw-flex tw-place-items-center tw-gap-3">
+                        <div
+                            class="tw-h-[300px] tw-w-full tw-overflow-hidden tw-rounded-lg"
+                        >
+                            <img
+                                src="https://blog.10times.com/wp-content/uploads/2023/12/tradeshow.jpg"
+                                class="tw-h-full tw-w-full tw-object-cover"
+                                alt="design"
+                            />
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-gap-2">
+                        <h3 class="tw-text-xl tw-font-medium">
+                            Trade Shows
+                        </h3>
+                        <p class="tw-text-gray-600">
+                            Urban Events supports organizers in selling tickets for community events like Trade Shows. Foster local engagement effortlessly!
+                        </p>
+                        <a href="https://app.urbanevents.pk" class="tw-mt-4">
+                            <span>Get Started</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[450px] tw-break-inside-avoid tw-flex-col tw-gap-2 tw-rounded-lg tw-bg-[#f3f3f3b4] tw-p-4 tw-shadow-lg max-lg:tw-w-full max-lg:tw-max-w-[400px]"
+                >
+                    <div class="tw-flex tw-place-items-center tw-gap-3">
+                        <div
+                            class="tw-h-[300px] tw-w-full tw-overflow-hidden tw-rounded-lg"
+                        >
+                            <img
+                                src="https://apec-conf.org/wp-content/uploads/2024/07/APEC-2024-Seminar-001-1024x683.webp"
+                                class="tw-h-full tw-w-full tw-object-cover"
+                                alt="design"
+                            />
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-gap-2">
+                        <h3 class="tw-text-xl tw-font-medium">
+                           Seminars
+                        </h3>
+                        <p class="tw-text-gray-600">
+                            Organizers can sell tickets for educational seminars with Urban Events. Connect learners with experts for accessible professional development!
+                        </p>
+                        <a href="https://app.urbanevents.pk" class="tw-mt-4">
+                            <span>Get Started</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[450px] tw-break-inside-avoid tw-flex-col tw-gap-2 tw-rounded-lg tw-bg-[#f3f3f3b4] tw-p-4 tw-shadow-lg max-lg:tw-w-full max-lg:tw-max-w-[400px]"
+                >
+                    <div class="tw-flex tw-place-items-center tw-gap-3">
+                        <div
+                            class="tw-h-[300px] tw-w-full tw-overflow-hidden tw-rounded-lg"
+                        >
+                            <img
+                                src="https://cdn.jumpon.online/uploads/posts/Beyond%20The%20Valley%201.jpeg"
+                                class="tw-h-full tw-w-full tw-object-cover"
+                                alt="design"
+                            />
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-gap-2">
+                        <h3 class="tw-text-xl tw-font-medium">
+                        Festivals
+                        </h3>
+                        <p class="tw-text-gray-600">
+                            Easily sell tickets for concerts and music festivals with Urban Events. Maximize attendance and create unforgettable experiences!
+                        </p>
+                        <a href="https://app.urbanevents.pk" class="tw-mt-4">
+                            <span>Get Started</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[450px] tw-break-inside-avoid tw-flex-col tw-gap-2 tw-rounded-lg tw-bg-[#f3f3f3b4] tw-p-4 tw-shadow-lg max-lg:tw-w-full max-lg:tw-max-w-[400px]"
+                >
+                    <div class="tw-flex tw-place-items-center tw-gap-3">
+                        <div
+                            class="tw-h-[300px] tw-w-full tw-overflow-hidden tw-rounded-lg"
+                        >
+                            <img
+                                src="https://www.pakistantoday.com.pk/wp-content/uploads/2021/03/Pakistani-cricket-fans.jpg"
+                                class="tw-h-full tw-w-full tw-object-cover"
+                                alt="design"
+                            />
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-gap-2">
+                        <h3 class="tw-text-xl tw-font-medium">
+                            Sports Events
+                        </h3>
+                        <p class="tw-text-gray-600">
+                            Urban Events helps organizers sell tickets for sports events, from local games to major championships. Connect fans with thrilling live action!
+                        </p>
+                        <a href="https://app.urbanevents.pk" class="tw-mt-4">
+                            <span>Get Started</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="reveal-up tw-flex tw-h-fit tw-w-[450px] tw-break-inside-avoid tw-flex-col tw-gap-2 tw-rounded-lg tw-bg-[#f3f3f3b4] tw-p-4 tw-shadow-lg max-lg:tw-w-full max-lg:tw-max-w-[400px]"
+                >
+                    <div class="tw-flex tw-place-items-center tw-gap-3">
+                        <div
+                            class="tw-h-[300px] tw-w-full tw-overflow-hidden tw-rounded-lg"
+                        >
+                            <img
+                                src="https://media.licdn.com/dms/image/v2/D5612AQEjLZxri5VgZA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1694035170323?e=2147483647&v=beta&t=9TorSSVAfE8GGwa-TwfoI_JhojNzOVkqXJjHmYyMnic"
+                                class="tw-h-full tw-w-full tw-object-cover"
+                                alt="design"
+                            />
+                        </div>
+                    </div>
+                    <div class="tw-flex tw-flex-col tw-gap-2">
+                        <h3 class="tw-text-xl tw-font-medium">
+                           Fundraising Events
+                        </h3>
+                        <p class="tw-text-gray-600">
+                            Urban Events assists organizers in selling tickets for fundraising events, such as charity galas and auctions. Drive donations while creating memorable experiences for attendees!
+                        </p>
+                        <a href="https://app.urbanevents.pk" class="tw-mt-4">
+                            <span>Get Started</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+        <section
+            class="tw-relative tw-flex tw-min-h-[80vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6"
+        >
+            <div
+                class="tw-mt-8 tw-flex tw-flex-col tw-place-items-center tw-gap-5"
+            >
+                <div
+                    class="reveal-up tw-mt-5 tw-flex tw-flex-col tw-place-items-center tw-gap-3 tw-text-center"
+                >
+                    <h2 class="tw-text-4xl tw-font-semibold">
+                        Start Organizing Your Events With Us !
+                    </h2>
+
+                    <a
+                        href="https://app.urbanevents.pk"
+                        aria-label="Get Started"
+                        class="reveal-up tw-flex tw-h-[40px] tw-max-w-[450px] tw-place-content-center tw-place-items-center tw-gap-2 tw-bg-black tw-p-1 tw-px-4 tw-text-white"
+                    >
+                        <span>Get Started</span>
+                        <i class="bi bi-heart-fill"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="reveal-up tw-mt-6 tw-max-w-[80%] tw-place-content-center tw-border-2 tw-border-solid tw-border-black tw-p-2"
+                >
+                    <img
+                        src="https://www.eventsindustryforum.co.uk/images/articles/about_the_eif.jpg"
+                        alt="children"
+                        class="tw-h-full tw-w-full tw-object-contain"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="tw-mt-5 tw-flex tw-w-full tw-flex-col tw-place-items-center tw-p-[2%] max-lg:tw-p-3"
+        >
+            <h3
+                class="reveal-up tw-text-center tw-text-4xl tw-font-medium max-md:tw-text-2xl"
+            >
+                Read our Blog for more insights ✨
+            </h3>
+            <div
+                class="reveal-up tw-mt-10 tw-flex tw-flex-wrap tw-place-content-center tw-gap-10 max-lg:tw-flex-col"
+            >
+                <div
+                    href=""
+                    class="tw-flex tw-h-[400px] tw-w-[350px] tw-flex-col tw-gap-4 tw-overflow-clip tw-rounded-lg tw-p-4 max-lg:tw-w-[300px]"
+                >
+                    <div class="tw-h-[200px] tw-w-full tw-overflow-hidden">
+                        <img
+                            src="https://infinitypakistan.com/wp-content/uploads/2021/02/gallery-img17.jpg"
+                            alt="article image"
+                            class="tw-h-full tw-w-full tw-object-cover"
+                            srcset=""
+                        />
+                    </div>
+
+                    <div
+                        class="tw-flex tw-w-full tw-place-items-center tw-justify-between"
+                    >
+                        <div>Dec, 15, 2024</div>
+                        <a href="" class="btn tw-ml-auto">
+                            <span>Get Started</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="tw-h-[2px] tw-w-full tw-bg-gray-500"></div>
+                    <h3
+                        class="tw-mt-3 tw-text-2xl tw-font-medium max-md:tw-text-xl"
+                    >
+                        How to Plan your next event in style?
+                    </h3>
+                </div>
+
+                <div
+                    href=""
+                    class="tw-flex tw-h-[400px] tw-w-[350px] tw-flex-col tw-gap-4 tw-overflow-clip tw-rounded-lg tw-p-4 max-lg:tw-w-[300px]"
+                >
+                    <div class="tw-h-[200px] tw-w-full tw-overflow-hidden">
+                        <img
+                            src="https://www.norkon.net/wp-content/uploads/2023/07/Summer-festival-colin-lloyd-eiQqGBAMgIE-unsplash-1-1.jpg"
+                            alt="article image"
+                            class="tw-h-full tw-w-full tw-object-cover"
+                            srcset=""
+                        />
+                    </div>
+
+                    <div
+                        class="tw-flex tw-w-full tw-place-items-center tw-justify-between"
+                    >
+                        <div>Dec, 15, 2024</div>
+                        <a href="" class="btn tw-ml-auto">
+                            <span>Get Started</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="tw-h-[2px] tw-w-full tw-bg-gray-500"></div>
+                    <h3
+                        class="tw-mt-3 tw-text-2xl tw-font-medium max-md:tw-text-xl"
+                    >
+                    How to promote your Music Festival?
+                    </h3>
+                </div>
+                <div
+                    href=""
+                    class="tw-flex tw-h-[400px] tw-w-[350px] tw-flex-col tw-gap-4 tw-overflow-clip tw-rounded-lg tw-p-4 max-lg:tw-w-[300px]"
+                >
+                    <div class="tw-h-[200px] tw-w-full tw-overflow-hidden">
+                        <img
+                            src="https://www.wtcmanila.com.ph/wp-content/uploads/2021/09/party-concept-business-men-holding-gift-box-give-businesswomen-1.jpg"
+                            alt="article image"
+                            class="tw-h-full tw-w-full tw-object-cover"
+                            srcset=""
+                        />
+                    </div>
+
+                    <div
+                        class="tw-flex tw-w-full tw-place-items-center tw-justify-between"
+                    >
+                        <div>Feb, 21, 2024</div>
+                        <a href="" class="btn tw-ml-auto">
+                            <span>Get Started</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="tw-h-[2px] tw-w-full tw-bg-gray-500"></div>
+                    <h3
+                        class="tw-mt-3 tw-text-2xl tw-font-medium max-md:tw-text-xl"
+                    >
+                    How To Smartly Plan Your Next Corporate Event?
+                    </h3>
+                </div>
+            </div>
+        </section>
+
+        <hr class="tw-mt-4" />
+
+        <footer
+            class="tw-relative tw-flex tw-w-full tw-place-content-around tw-gap-3 tw-bg-primary tw-px-[10%] tw-pb-4 tw-pt-[5%] tw-text-white"
+        >
+            <div
+                class="tw-relative tw-flex tw-h-full tw-w-full tw-flex-col tw-gap-2"
+            >
+                <div
+                    class="tw-my-2 tw-flex tw-w-full tw-place-content-around tw-gap-3 max-md:tw-flex-col"
+                >
+                    <div
+                        class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 max-md:tw-w-full"
+                    >
+                        <img
+                            src="./assets/logo.png"
+                            alt="logo"
+                            class="tw-w-[150px]"
+                        />
+                        <div>
+                         Focus Labs 
+                        (Pvt) Limited,
+                            <br />
+                            2nd Floor,South Side,Gulberg Empire,Plot 33-40,Executive Block,Gulberg,Islamabad,
+                            <br />
+                            Pakistan
+                        </div>
+                    </div>
+
+                    <div
+                        class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4"
+                    >
+                        <h2 class="tw-text-3xl max-md:tw-text-xl">
+                            Recent Events
+                        </h2>
+                        <div
+                            class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm"
+                        >
+                            <a href="" class="footer-link">Islamabad</a>
+                            <a href="" class="footer-link">Lahore</a>
+                            <a href="" class="footer-link">Karachi</a>
+                            <a href="" class="footer-link">Other</a>
+                        </div>
+                    </div>
+                    <div
+                        class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4"
+                    >
+                        <h2 class="tw-text-3xl max-md:tw-text-xl">Resources</h2>
+                        <div
+                            class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm"
+                        >
+                            <a href="" class="footer-link">About Us</a>
+                            <a href="" class="footer-link">Pricing</a>
+                            <a href="" class="footer-link">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tw-h-[1px] tw-w-[100%] tw-bg-white"></div>
+
+                <div class="tw-mt-3 tw-flex tw-gap-4 tw-text-xl">
+                    <a href="" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a
+                        href="https://instagram.com/"
+                        aria-label="Twitter"
+                    >
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                    <a
+                        href="https://instagram.com/"
+                        aria-label="Instagram"
+                    >
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
+        integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"
+        integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="./index.js"></script>
+</html>
