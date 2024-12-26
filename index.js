@@ -53,45 +53,31 @@ window.addEventListener("resize", () => {
 gsap.registerPlugin(ScrollTrigger);
 
 const isMobile = window.innerWidth < RESPONSIVE_WIDTH;
-const animationDuration = isMobile ? 0.5 : 0.8; // Shorter duration for mobile
+const titleAnimationDuration = 0.3; // Faster duration for title section
+const contentAnimationDuration = 0.4; // Slightly longer for other content
 
-gsap.to(".reveal-hero-text", {
-    opacity: 0,
-    y: "100%",
-});
-
+// Animate title section immediately on load
 window.addEventListener("load", () => {
-    // animate from initial position
+    // Animate title text
     gsap.to(".reveal-hero-text", {
         opacity: 1,
         y: "0%",
-        duration: animationDuration,
-        stagger: 0.5,
+        duration: titleAnimationDuration,
+        stagger: 0.1, // Quick stagger for a dynamic effect
     });
-});
 
-// ------------- reveal section animations ---------------
-
-const sections = gsap.utils.toArray("section");
-
-if (!isMobile) { // Skip animations on mobile
+    // Animate other sections with scroll trigger
+    const sections = gsap.utils.toArray(".reveal-up");
     sections.forEach((sec) => {
-        const revealUptimeline = gsap.timeline({
-            paused: true,
+        gsap.from(sec, {
+            opacity: 0,
+            y: "50%", // Start from below
+            duration: contentAnimationDuration,
             scrollTrigger: {
                 trigger: sec,
-                start: "10% 80%", // top of trigger hits the top of viewport
-                end: "20% 90%",
+                start: "top bottom", // Trigger when top of section hits bottom of viewport
+                toggleActions: "play none none reverse", // Play on enter, reverse on leave
             }
         });
-
-        const staggerAmount = isMobile ? 0 : 0.2; // No stagger on mobile
-
-        revealUptimeline.to(sec.querySelectorAll(".reveal-up"), {
-            opacity: 1,
-            duration: animationDuration,
-            y: "0%",
-            stagger: staggerAmount,
-        });
     });
-}
+});
